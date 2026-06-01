@@ -325,6 +325,61 @@ section {
   line-height: 1.7;
 }
 
+.exp-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.exp-bullets li {
+  position: relative;
+  padding-left: 1.4rem;
+  line-height: 1.7;
+}
+
+.exp-bullets li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--cyan);
+  font-size: 0.9rem;
+}
+
+/* PROFILE */
+#perfil { background: var(--bg); }
+
+.profile-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2rem 2.4rem;
+  background: var(--surface);
+  position: relative;
+  overflow: hidden;
+  max-width: 780px;
+  transition: border-color 0.3s;
+}
+
+.profile-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--cyan), var(--amber));
+}
+
+.profile-card:hover {
+  border-color: var(--cyan);
+}
+
+.profile-text {
+  font-size: 1rem;
+  color: var(--text);
+  line-height: 1.8;
+}
+
 /* SKILLS */
 #habilidades { background: var(--bg); }
 
